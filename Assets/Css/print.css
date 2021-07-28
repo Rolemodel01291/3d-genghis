@@ -1,0 +1,24 @@
+html{zoom:100%!important;background-color:#FFF!important;}
+body{height:auto!important;zoom:100%!important;background-color:#FFF!important;}
+h5{font-size:8px;}
+h4,.outlineBtn,.cleanBtn{font-size:9px;}
+h3{font-size:22px;}
+h2, .casecarousel .case .link, .newsarticles .articlelink.featured .txt h3{font-size:26px;}
+h1{font-size:46px;}
+h1.outline{font-size:50px;}
+p, input, select, textarea, .filewrapper label{font-size:13px;}
+#content{position:static!important;transform:none!important;height:auto!important;}
+footer, .application, #threed, .mainmenu{display:none!important;}
+
+.textpage .header, .jobpage .header{display:block;position:static!important;transform:none!important;width:100%;left:auto;top:auto;margin:0!important;padding:0!important;min-height:0!important;height:auto!important;background-color:#FFF!important;}
+.textpage .header .imgHolder, .jobpage .header .imgHolder{position:static!important;transform:none!important;margin:0!important;right:auto;left:0!important;top:0!important;height:auto!important;max-height:4cm;overflow:hidden;}
+.header .imgHolder .aspectKeeper{position:static!important;height:auto;width:100%;padding:0!important;margin:0!important;}
+.header .imgHolder .aspectKeeper img{position:static!important;width:100%!important;height:auto!important;opacity:1!important;}
+
+.textpage .header .txt, .jobpage .header .txt{padding:0!important;margin-top:0!important;margin-bottom:0!important;margin-left:auto;margin-right:auto;position:static!important;color:#FFF!important;opacity:1!important;width:auto;text-align:center;}
+.textpage .header .txt h2, .jobpage .header .txt h2{color:#000!important;opacity:1!important;padding:0!important;margin:0!important;line-height:100%!important;margin-top:1cm!important;}
+
+.textpage{position:static!important;margin-top:0!important;padding-top:0!important;width:100%;background-color:#FFF!important;}
+.centerOverflowed{width:100%;padding-left:.5cm!important;padding-right:.5cm!important;}
+.logo{left:1cm;top:1cm;width:1.5cm;}
+.textOnly{background-color:#FFF!important;}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="/">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes" />
+  <meta name="keywords" content="mentorbox, pier1, ghenghis, franklinmint, farmerscart, dressbarn, radioshack" />
+  <meta name="robots" content="all" />
+  <meta name="description" content="innovative, brilliant fashion design with three.js" />
+  <meta name="theme-color" content="#000000">
+  <meta name="twitter:title" content="Genghis" />
+  <meta name="twitter:description" content="Genghis introduction" />
+  <link rel="icon" type="image/png" href="./Assets/Grx/geng_orig.png" />
+  <link rel="stylesheet" type="text/css" href="./Assets/Css/global.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="./Assets/Css/print.css" />
+
+
+  <title>Genghis</title>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+    ga("create", "UA-47172073-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <script id="vertexShader" type="x-shader/x-vertex">
+    uniform vec3 viewVector;
+    uniform float c;
+    uniform float p;
+    varying float intensity;
+    
+    void main({
+        vec3 vNormal = normalize( normalMatrix * normal );
+      vec3 vNormel = normalize( normalMatrix * viewVector );
+      intensity = pow( c - dot(vNormal, vNormel), p );
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }
+  </script>
+
+  <script id="fragmentShader" type="x-shader/x-fragment">
+    uniform vec3 glowColor;
+    varying float intensity;
+
+  void main() {
+    vec3 glow = glowColor * intensity;
+    gl_FragColor = vec4( glow, 1.0 );
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <a href="" class="logo" style="opacity:0;">
+    <div class="logosvg" style="padding-bottom:33.3%">
+      <img src="Assets/Grx/geng_orig_white.png" />
+    </div>
+  </a>
+
+
+
+  <div id="threed"></div>
+
+  <div id="content">
+
+    <div class="home page" data-url="/" data-desc="Genghis">
+      <section class="contentblock intro centerA" data-para="50,25">
+        <div class="txt">
+          <h5></h5>
+          <h1 style="opacity:0;">Genghis</h1>
+          <h3 style="opacity:0;" class="outline"><span>Internet explorers and
+              ecommerce</span><br><span>connoisseurs!</span> </h3>
+        </div>
+      </section>
+
+      <!-- <section class="contentblock txtImg centerOverflowed introb" data-para="150,0" data-anim="r" data-target="1"
+        data-img="https://images.prismic.io/veritystudios%2Fdd174cfd-5fcc-4969-9617-4aedc4648734_hero+shot_credited.jpg?auto=compress,format&rect=0,136,1200,926&w=635&h=490|https://images.prismic.io/veritystudios%2Fdd174cfd-5fcc-4969-9617-4aedc4648734_hero+shot_credited.jpg?auto=compress,format&rect=0,137,1200,926&w=1270&h=980"
+        data-rel="1270,980">
+        <div class="txt">
+          <h2>We transform well-known retail brands into ecommerce success stories</h2>
+          <p>We believe in projects that have a net-positive on the world</p>
+        </div>
+      </section> -->
+
+      <section class="contentblock centerOverflowed txtImg" data-para="20,10" data-anim="r" data-target="1"
+        style="visibility: visible;">
+        <div class="globe_intro txt">
+          <h2>
+            <div style="display: block; text-align: left; position: relative;">We transform well-known </div>
+            <div style="display: block; text-align: left; position: relative;">retail brands into ecommerce </div>
+            <div style="display: block; text-align: left; position: relative;">success stories</div>
+          </h2>
+          <p data-nsfw-filter-status="swf">
+          <div style="display: block; text-align: left; position: relative;">We believe in projects that have a
+            net-positive on the world</div>
+          </p>
+        </div>
+        <div class="globe imgHolder">
+          <iframe src="./Earth/earth.html"
+            style="padding-left:25%; width: 100%; height: 100%; border: none; background: transparent;"></iframe>
+        </div>
+      </section>
+
+      <section class="contentblock txtImg centerOverflowed" data-para="20,10" data-anim="r"
+        data-img="./Assets/Grx/pier1.png|./Assets/Grx/pier1.png|./Assets/Grx/pier1.png" data-rel="1140,727,270,172">
+        <div class="txt">
+          <h3><span>🏡 Pier 1</span><br><span>For all your interior decorating needs. </span></h3>
+          <p>Founded in 1962, Pier1 has delighted customers for years with an extensive catalogue of furniture,
+            lighting, tableware, décor, essence, rugs, and art, all handpicked from the world's finest artisans. At its
+            peak, Pier1 had around 973 locations all over the United States. REV has brought back this much beloved
+            brand as an online store, where it will continue to offer new and exciting ways of experiencing one's home.
+          </p>
+        </div>
+      </section>
+
+      <section class="contentblock imgTxt centerOverflowed" data-para="60,10" data-anim="l"
+        data-img="./Assets/Grx/radioshack.png|./Assets/Grx/radioshack.png|./Assets/Grx/radioshack.png"
+        data-rel="1140,727,270,172">
+        <div class="txt">
+          <h3><span>🕹 RadioShack</span><br><span>You've Got Questions, We've Got Answers.</span></h3>
+          <p>Founded in 1962, Pier1 has delighted customers for years with an extensive catalogue of furniture,
+            lighting, tableware, décor, essence, rugs, and art, all handpicked from the world's finest artisans. At its
+            peak, Pier1 had around 973 locations all over the United States. REV has brought back this much beloved
+            brand as an online store, where it will continue to offer new and exciting ways of experiencing one's home.
+          </p>
+        </div>
+      </section>
+
+      <section class="contentblock txtImg centerOverflowed" data-para="20,10" data-anim="r"
+        data-img="./Assets/Grx/dressbarn.png|./Assets/Grx/dressbarn.png|./Assets/Grx/dressbarn.png"
+        data-rel="1140,727,270,172">
+        <div class="txt">
+          <h3><span>👗 Dressbarn</span><br><span>The clothing store every woman deserves.</span></h3>
+          <p>Founded in 1962, Dressbarn is the one stop shop for the modern woman. This retail giant had over 650 brick
+            and mortar locations before closing in 2019. Acquired by REV in 2020, the iconic brand has been relaunched
+            as an exciting new ecommerce experience, offering an affordable variety of clothing, shoes, and accessories.
+            The same select brands loyal customers have come to know and love, all under one (virtual) roof.</p>
+        </div>
+      </section>
+
+      <section class="contentblock imgTxt centerOverflowed" data-para="60,10" data-anim="l"
+        data-img="./Assets/Grx/franklinmint.png|./Assets/Grx/franklinmint.png|./Assets/Grx/franklinmint.png"
+        data-rel="1140,727,270,172">
+        <div class="txt">
+          <h3><span>🍵 Franklin Mint</span><br><span>For the coin collector in you.</span></h3>
+          <p>Founded in 1964 in Wawa, Pennsylvania, the brand name Franklin Mint evokes history, timelessness, and
+            unmatched quality with its collection of commemorative collectibles, dolls, knives, LP record sets, and
+            die-cast vehicles. Seeking to preserve and revive this illustrious brand, REV acquired the Franklin Mint and
+            will soon be operating it as an online store, restoring both the hopes and faith of its loyal customers.</p>
+        </div>
+      </section>
+
+      <section class="contentblock txtImg centerOverflowed" data-para="20,10" data-anim="r"
+        data-img="./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png"
+        data-rel="1140,727,270,172">
+        <div class="txt">
+          <h3><span>📚 MentorBox</span><br><span>A Streaming Service for Books.</span></h3>
+          <p>Founded in 2016, MentorBox is the most powerful self-education system in the world. MentorBox members
+            believe in expanding their knowledge, but they don't have the time to read the right books. MentorBox offers
+            a variety of powerful educational videos, audios, cheat sheets, and workbooks that teach business, mindset,
+            investing, health, history, literature, and more¦ summing up the essence of essential reads, designed for
+            book lovers and entrepreneurs of all skill levels.</p>
+        </div>
+      </section>
+
+      <section class="contentblock imgTxt centerOverflowed" data-para="60,10" data-anim="l"
+        data-img="./Assets/Grx/farmerscart.png|./Assets/Grx/farmerscart.png|./Assets/Grx/farmerscart.png"
+        data-rel="1140,727,270,172">
+        <div class="txt">
+          <h3><span>🥩 Farmers Cart</span><br><span>A farmer's market delivered to your door.</span></h3>
+          <p>Imagine being able to purchase the most ethically-sourced, highest quality produce and have it delivered
+            right to your very doorstep? No longer a fantasy, FarmersCart is an online shop that sources from the most
+            symbiotic, carbon-positive farming systems in the world. FarmersCart provides everyday consumers the
+            opportunity to eat prime, delicious poultry, drygoods, seafood, and meat no matter the constraints of their
+            location.</p>
+        </div>
+      </section>
+
+      <!-- <section class="contentblock videoblock centerA" data-para="100,0" data-src="" data-rel="1280,720,640,360">
+      </section> -->
+
+      <section class="contentblock centerTxt centerA">
+        <div class="txt" style="position:absolute;z-index:10;margin-top:10%">
+          <h5>What we do</h5>
+          <h2>Bringing technology to life</h2>
+          <p>Genghis is Future Home Of Genghis Software, it enables customers do various kinds of activities in their
+            life, being beautiful, creative and fashionable is just Genghis purpose </p>
+          <a href="" class="outlineBtn">Explore</a>
+        </div>
+        <iframe src="./wave/wave.html" style="width: 100%; height: 650px; border: none; background: transparent;">
+
+        </iframe>
+      </section>
+    </div>
+
+    <div class="fourzerofour page" data-url="404" data-desc="">
+      <section class="contentblock txtImg centerA intro" data-para="0,0">
+        <div class="txt">
+          <h5>404 - NOT FOUND</h5>
+          <h2>Uh-oh.<br />Looks like you’re lost.</h2>
+          <a href="" class="outlineBtn">Return to home</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="textpage page dark" data-url="">
+      <section class="contentblock txtImg centerOverflowed header" data-para="0,0" data-anim="f" data-target="2"
+        data-img="./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png"
+        data-rel="1440,496,320,250">
+        <div class="txt" data-noanimation="true">
+          <h2>Genghis</h2>
+        </div>
+      </section>
+
+
+    </div>
+
+    <div class="textpage page dark" data-url="">
+      <section class="contentblock txtImg centerOverflowed header" data-para="0,0" data-anim="f" data-target="2"
+        data-img="./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png"
+        data-rel="1440,496,320,250">
+        <div class="txt" data-noanimation="true">
+          <h2>Genghis</h2>
+        </div>
+      </section>
+
+
+    </div>
+
+    <div class="textpage page dark faq" data-url="">
+      <section class="contentblock txtImg centerOverflowed header" data-para="0,0" data-anim="f" data-target="2"
+      data-img="./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png|./Assets/Grx/mentorbox.png"
+        data-rel="1440,496,320,250">
+        <div class="txt" data-noanimation="true">
+          <h2>Frequently asked questions</h2>
+        </div>
+      </section>
+
+      
+
+      <section class="contentblock textOnly centerOverflowed">
+        <div class="txt">
+          <h3>Didn’t find what you were looking for?</h3>
+          <a href="" class="outlineBtn">Contact us</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- <section class="casecarousel">
+      
+
+     
+
+    </section> -->
+
+
+
+    <section class="signup">
+      <div class="contentblock centerA" style="padding: 1%">
+        <h2>Join our mailing list.</h2>
+        <div class="inputArea" style="padding: 1%">
+          <!-- CTA -->
+          <div class="cta">Sign up to our newsletter</div>
+        </div>
+        <div class="newsletterpopup">
+          <!-- Signup form -->
+          <div class="form">
+            <div class="closeBtn"></div>
+            <h3>Keep in touch.</h3>
+            <p>Complete the form below to sign up for Genghis email newsletters. You’ll be the first to know about new
+              events, products and where you can see our innovative products.</p>
+            <form action="" target="receiveNewsletterJob" method="POST">
+              <input type="hidden" name="u" value="1ec74fc95359b1c850e6edf60" />
+              <input type="hidden" name="id" value="59be8c6b3c" />
+              <input type="text" name="MERGE1" id="MERGE1" size="30" placeholder="*First name" required />
+              <input type="text" name="MERGE2" id="MERGE2" size="30" placeholder="*Surname" required />
+              <input type="text" name="MERGE3" id="MERGE3" size="30" placeholder="*Company name" required />
+              <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="30" value=""
+                placeholder="*Email address" required />
+              <input type="submit" class="submit" name="submit" value="Sign up" style="display:none;" />
+            </form>
+            <div class="tick">
+              <p class="small">I consent to receiving marketing<br />communications emails from Genghis.</p>
+              <div class="rect">
+                <div class="inner"></div>
+              </div>
+            </div>
+            <a href="" class="outlineBtn">Sign up</a>
+            <!--<div class="submitBtn">Sign up</div>-->
+            <p class="small">You can unsubscribe from our mailing list at any time.<br />Please read our <a href="legal"
+                target="_blank">privacy policy</a> for more details.</p>
+            <iframe name="receiveNewsletterJob" style="display:none;"></iframe>
+          </div>
+          <!-- Thank you message -->
+          <div class="thanks">
+            <h3>Thanks for signing up.</h3>
+            <p> We will bring you interesting features, events and behind-the-scenes stories from the Verity team.</p>
+            <a href="" class="outlineBtn">Close</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo"></div>
+      <div class="copyright">© Genghis. All rights reserved.</div>
+
+      <section class="center a">
+        <h4>Get in Touch</h4>
+
+      </section>
+      <section class="center b onsite">
+        <h4>Assistance</h4>
+        <a href="">Contact</a>
+        <a href="">FAQs</a>
+        <a href="">Legal Notices</a>
+      </section>
+      <section class="social">
+      </section>
+    </footer>
+  </div>
+  <!-- <div id="cookieconsent">
+
+  </div> -->
+
+  <script src="Assets/Js/TweenLite.min.js"></script>
+  <script src="Assets/Js/plugins/CSSPlugin.min.js"></script>
+  <script src="Assets/Js/plugins/ScrollToPlugin.min.js"></script>
+  <script src="Assets/Js/easing/EasePack.min.js"></script>
+  <script src="Assets/Js/easing/CustomEase.min.js"></script>
+  <script src="Assets/Js/utils/SplitText.min.js"></script>
+  <script src="Assets/Js/Templates.js"></script>
+  <script src="Assets/Js/Main3D.js"></script>
+  <script src="Assets/Js/Pages.js"></script>
+  <script src="Assets/Js/Work.js"></script>
+  <script src="Assets/Js/News.js"></script>
+  <script src="Assets/Js/global.js"></script>
+  <script src="Assets/Js/main.js"></script>
+  <script src="Assets/Js/three.min.js" async defer></script>
+  <!-- <script src="Assets/Js/letter.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r63/three.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/orbitcontrols.js"></script>
+  <script src="http://dir.by/example_lib/tree_js/three.js"></script>
+
+
+</body>
+
+</html>

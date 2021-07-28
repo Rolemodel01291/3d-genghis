@@ -1,0 +1,16 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy:prod": "aws s3 cp ./dist s3://genghis-web --recursive --acl public-read --profile genghis-web",
+    "inval:prod": "aws cloudfront create-invalidation --distribution-id E10ZLRSXCQQMR2 --paths \"/index.html\" --profile genghis-web --no-cli-pager"
+  },
+  "devDependencies": {
+    "vite": "^2.3.5"
+  },
+  "dependencies": {
+    "three": "^0.129.0"
+  }
+}
